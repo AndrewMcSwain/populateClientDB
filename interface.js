@@ -64,10 +64,9 @@ prompt.start();
 
 
 var addStudent = function(){
-//manipulate create new temp object from user input acquired from prompt
-   //build a new object inside of array students in data.js.  
-   //populate new object according to keys in schema
-  //and according to values provided through prompt functiom
+//create new temp object from user input acquired from prompt
+  //populate new object according to keys in schema
+  ///build a new object inside of array 'students' in 'data.js'
   
   prompt.get(newStudentSchema, function(err,result){
     let newStudent = {
