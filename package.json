@@ -1,1 +1,25 @@
-
+{
+  "name": "p2zy1",
+  "version": "0.0.1",
+  "description": "",
+  "main": "interface.js",
+  "dependencies": {
+    "babel": "^6.5.2",
+    "jsonfile": "^2.4.0",
+    "prompt": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndrewMcSwain/populateClientDB.git"
+  },
+  "author": "Andrew McSwain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndrewMcSwain/populateClientDB/issues"
+  },
+  "homepage": "https://github.com/AndrewMcSwain/populateClientDB#readme"
+}
