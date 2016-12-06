@@ -70,6 +70,8 @@ var module.exports = {
       //avg_students_qtr
       //retention_rate_avg
       //retention_rate_composite
+      //cancelationsToTotalClasses
+      //Cancelation_percentages_as_an_array
     }
   };
 };
