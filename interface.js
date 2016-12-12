@@ -93,15 +93,25 @@ function addNewStudent(){
           Class_type: result.Class_type,
           Rate: result.Rate
         };
-        prompt
         pushArray.push(newStudent);
-        appendObjJSON(student_primary, pushArray);
-        })
+       
   }
 
     addStudentUserInput();
 }  
 
+function doAgain(schema){
+  prompt.get('another?', function(result){
+    if ('result.another' === "yes"|| 'result.another' === "y"){
+      //do another
+    }else if('result.another' === "no"|| 'result.another' === "n"){
+      //finalize
+      ////export
+    }else{
+      //print invalid response, please choose "yes"/ "no" or "y"/ "n"
+    }
+  })
+}
   
   
   
