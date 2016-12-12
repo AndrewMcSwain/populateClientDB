@@ -1,61 +1,130 @@
+
+
+//////
 //module imports
+//////
 var prompt = require('prompt');
 var jsonfile = require('jsonfile');
+var fs = require('fs');
 
+//////
 //schema imports
-newStudentSchema = require('./schema/new_student.js');
-/**newPaymentSchema = require('../schema/payment.js');
-**/
+//////
+var newStudentSchema = require('./schema/new_student.js');
+// var newPaymentSchema = require('../schema/payment.js');
 
+//////
 //data imports
+///////
 var student_primary = './db/student_primary_no_var.json';
 //var teacher_primary = "db/teacher_primary.json";
 
+////////////////////////////
+/////                  /////
+//Top-Layer Function Calls// 
+/////                  /////
+////////////////////////////
 
 //prompt
 prompt.start();
+
+//run modules
 addNewStudent();
+
+
+
+//        ///     //////
+//////
+//     Functions   ////
+//////     
+//       ///    //////
+
 function startApp() { 
-//print  
+///print  
 }
+
+function appendObjJSON(file, obj){
+  let stringObj = JSON.stringify(obj);
+  fs.appendFile(file, stringObj, 
+     function(err,data){
+       if(err)
+         throw err;
+       else 
+         console.log("file" + file + "successfully sppended with" + stringObj);
+         }
+      );
+}
+
+
 
 function addNewStudent(){
 
   var pushArray = [];
-  jsonfile.writeFile(student_primary, newStudent, {spaces: 2}, function(err) {
-
-    console.log(err);
-  })
-  var newStudent;
-
-  var addStudent = function(){
-  //create new temp object from user input acquired from prompt
-    //populate new object according to keys in schema
-    ///build a new object inside of array 'students' in 'data.js'
-   
-    prompt.get(newStudentSchema.newStudentSchema, function(err,result){
-      var newStudent = {
-        Name: result.Name,
-        Teacher: result.Teacher,
-        Start_date: result.Start_date,
-        Class_type: result.Class_type,
-        Rate: result.Rate
-      }
-      return newStudent;
-    })
+  var addStudentUserInput = function(){
+    prompt.get(newStudentSchema.newStudentSchema,
+     function(err,result){
+       let newStudent = {
+          Name: result.Name,
+          Teacher: result.Teacher,
+          Start_date: result.Start_date,
+          Class_type: result.Class_type,
+          Rate: result.Rate
+        };
+        pushArray.push(newStudent);
+        appendObjJSON(student_primary, pushArray);
+        })
   }
-    addStudent();
-    pushArray.push(newStudent);
+
+    addStudentUserInput();
 }  
+
+   
+
+
+function newEntry(schema, output){
+  var pushArray = [];
+  var input = function(){
+    prompt.get(schema,
+     function(err, result){
+        pushArray.push(result);
+        arrayToObj(pushArray);
+        appendObjJSON(output, pushObj);
+        })
+  }
+  input(); 
+}  
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+//put this inside of addNewStudent
+    //prompt "another student?"
+    //if prompt yes then addStudent(); pushArray.push(newStudent)
+    //maybe add option to add payment info?
+    
+    //need a function to seperate each item in the array to a unique string object
+
+
 ///NEW FUNCTI0N
 //prompt ask user if they would like to populate contact info
 //if yes, execute contact_info.js module in ./schema
-
-//NEW FUNCTION
-// return to initial
-//
-//
-
 
 
 
