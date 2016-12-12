@@ -36,7 +36,9 @@ appendObjToArray(student_primary, newStudent);
 function appendObjToArray(file, schema){
   var dbObj = file.model;
   var schema = schema.schema;
+  //set up result prototype with result.Id maker
   prompt.get(schema, function(err, result){
+    let result.Id = dbObj.length + 1;
     fs.appendFile(file, result, 
       function(err, data){
         if(err)
