@@ -16,7 +16,7 @@ var newStudentSchema = require('./schema/new_student.js');
 //////
 //data imports
 ///////
-var student_primary = './db/student_primary_no_var.json';
+var student_primary = './db/student_primary_var.js';
 //var teacher_primary = "db/teacher_primary.json";
 
 ////////////////////////////

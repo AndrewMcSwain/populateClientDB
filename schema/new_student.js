@@ -2,7 +2,7 @@
 //run this when you have a new student and it will add a new entry to student_records, which is the primary database for students
 
 
-exports.newStudentSchema = 
+exports.schema = 
   { 
     properties :
      {
