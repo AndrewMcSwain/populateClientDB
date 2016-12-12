@@ -100,23 +100,20 @@ function addNewStudent(){
     addStudentUserInput();
 }  
 
-function doAgain(schema){
+function doAgain(entryType){
   prompt.get('another?', function(result){
     if ('result.another' === "yes"|| 'result.another' === "y"){
       //do another
+      //newEntry()
     }else if('result.another' === "no"|| 'result.another' === "n"){
       //finalize
       ////export
+      //back to main menu
     }else{
       //print invalid response, please choose "yes"/ "no" or "y"/ "n"
     }
   })
-}
-  
-  
-  
-  
-  
+}  
    
 
 /**
