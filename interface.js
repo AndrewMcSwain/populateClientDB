@@ -33,14 +33,37 @@ addNewStudent();
 
 
 
-//        ///     //////
+//        ///    //////
 //////
-//     Functions   ////
+//     Functions  ////
 //////     
 //       ///    //////
 
+
 function startApp() { 
-///print  
+
+//print "what do you want to do?"
+//Options: Create a New Entry, Modify an Existing Entry, View Entries
+
+// load schema names from dir
+// clip off the file extension
+// each modified string loaded into array 
+// load main menu prompt ("what do you want to do?")
+// display array of schema as options
+
+//Schema
+//student
+//contact
+//payment
+//teacher
+
+//New Entry
+//use Schema above
+
+//Modify Existing Entries
+//optionsArray.push(schema.forEach(property))
+//
+
 }
 
 function appendObjJSON(file, obj){
@@ -70,6 +93,7 @@ function addNewStudent(){
           Class_type: result.Class_type,
           Rate: result.Rate
         };
+        prompt
         pushArray.push(newStudent);
         appendObjJSON(student_primary, pushArray);
         })
@@ -78,10 +102,15 @@ function addNewStudent(){
     addStudentUserInput();
 }  
 
+  
+  
+  
+  
+  
    
 
-
-function newEntry(schema, output){
+/**
+function newEntryOne(schema, output){
   var pushArray = [];
   var input = function(){
     prompt.get(schema,
@@ -92,7 +121,7 @@ function newEntry(schema, output){
         })
   }
   input(); 
-}  
+}  **/
 
 
 
