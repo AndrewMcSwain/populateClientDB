@@ -42,7 +42,7 @@ function appendObjToArray(file, schema){
         if(err)
           throw err;
         else if(!dbObj){
-          console.log("\n\n        Whoops!!\n\n" + "The var 'model' in db file " + file + " doesn't exist." + " Check the contents of the file and make sure the db object you are trying to append to is contained in the variable 'model' \n\n")}**/
+          console.log("\n\n        Whoops!!\n\n" + "The var 'model' in db file " + file + " doesn't exist." + " Check the contents of the file and make sure the db object you are trying to append to is contained in the variable 'model' \n\n")}
         else{
           dbObj.push(result);
           console.log("file" + file + "successfully appended to array" + "at index" + dbObj.length );
