@@ -73,7 +73,7 @@ function appendObjJSON(file, obj){
        if(err)
          throw err;
        else 
-         console.log("file" + file + "successfully sppended with" + stringObj);
+         console.log("file" + file + "successfully appended with" + stringObj);
          }
       );
 }
@@ -94,7 +94,7 @@ function addNewStudent(){
           Rate: result.Rate
         };
         pushArray.push(newStudent);
-       
+        appendObjJSON(student_primary, pushArray);
   }
 
     addStudentUserInput();

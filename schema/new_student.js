@@ -8,6 +8,8 @@ exports.schema =
      {
     
   //  Id: //generate from primary table
+  
+  //  Name
       Name: {
         description: 'Name of Student',
         type: 'string',
@@ -15,6 +17,8 @@ exports.schema =
         //message: 'invalid name',
         required: true
       },
+
+  //  Teacher
       Teacher: {
         description: 'Insert Teacher Code. Refer to primary table id in "teacher_records.js"',
         type: 'integer',
@@ -23,6 +27,8 @@ exports.schema =
         required: false
       },
       //PreviousTeachers: type: array this will be input in a different mechanism. It's here while this file serves as the full model of a student entry
+
+   //  Start_date
       Start_date: {
         description: 'Insert the scheduled date of the students first class PUT THE MONTH FIRST (MM/DD/YYYY)',
         type: 'string',
@@ -30,6 +36,8 @@ exports.schema =
         //invalid date. did you put the month first?
         required: false
       },
+
+  //  Class_type
       Class_type:{  //group, tailor, stock, pair
         description: 'what is the Class_type? ("group, tailor, stock, pair")',
         type: 'string',
@@ -37,11 +45,22 @@ exports.schema =
         //invalid class_type. you have to use one of the these words: group, tailor, stock, pair
         required: false
       },
+
+   // Rate
       Rate: {
         description:'The amount per hour they pay if individual/pair  or per month if group',
         type:'integer',
         required: false
       }
+  // Add Payment Prompt?
+      Payment: {
+        description: 'Would you like to add a payment to this profile?',
+        required: false
     }	
+  // Add Contact Info
+       Contact:{
+         description: 'Would you like to add contact info for thus profile?'
+         required: 'false'
+       }
   };
   
