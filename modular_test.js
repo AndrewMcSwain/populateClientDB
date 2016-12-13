@@ -51,7 +51,15 @@ function appendObjToArray(file, schema){
         };
       }
     );
+    //app specific cases
+    // payment
+    if(result.Payment === "yes" || result.Payment === "y"){
+      prompt.get(newPayment)
    }
+   if(result.Contact === "yes" || result.Contact === "y"){
+      prompt.get(contactInfo)
+   }
+   
   );
 }
      
