@@ -1,0 +1,9 @@
+student_primary
+student_contact
+student_payment_history
+student_attendence
+
+teacher_primary
+teacher_contact
+teacher_payment_history
+teacher_attednence
