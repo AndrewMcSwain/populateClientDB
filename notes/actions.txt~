@@ -1,0 +1,19 @@
+start session
+  on push button
+  set object to date
+  convert to JSON
+  load into tables
+    primary tables
+      student attendence table
+         new entry 
+           contents: date, starttime, teacher, location (if possible)
+      teacher attendence table
+          new entry
+            contents: date, starttime, student, location (if possible),
+isPaid=False
+
+    secondary tables (merged)
+      student/teacher combo table
+      
+stop session
+
